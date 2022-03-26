@@ -4,7 +4,7 @@ import './style.css';
 const container = document.getElementById("container");
 
 // make header
-const headerFunc = () => {
+export const headerFunc = () => {
     const header = document.createElement("div");
     header.setAttribute("id", "header");
     container.appendChild(header);
@@ -13,7 +13,7 @@ const headerFunc = () => {
 };
 
 // make body
-const toDoBodyFunc = () => {
+export const toDoBodyFunc = () => {
     const toDoBody = document.createElement("div");
     toDoBody.setAttribute("id", "to-do-body");
     container.appendChild(toDoBody);
@@ -21,9 +21,9 @@ const toDoBodyFunc = () => {
 };
 
 // make sidebar
-const sideBarFunc = () => {
+export const sideBarFunc = () => {
     //get to do body by id 
-    let toDoBody = document.getElementById("to-do-body");
+    const toDoBody = document.getElementById("to-do-body");
     const sideBar = document.createElement("div");
     sideBar.setAttribute("id", "side-bar");
     toDoBody.appendChild(sideBar);
@@ -31,9 +31,9 @@ const sideBarFunc = () => {
 };
 
 // make project content
-const projectContentFunc = () => {
+ export const projectContentFunc = () => {
     //get to do body by id 
-    let toDoBody = document.getElementById("to-do-body");
+    const toDoBody = document.getElementById("to-do-body");
 
     const projectContent = document.createElement("div");
     projectContent.setAttribute("id", "project-content");
@@ -54,7 +54,7 @@ const projectContentFunc = () => {
 };
 
 // make day wise list in sidebar
-const dayWiseListFunc = () => {
+export const dayWiseListFunc = () => {
     //get to do body by id 
     let sidebar = document.getElementById("side-bar");
 
@@ -84,7 +84,7 @@ const dayWiseListFunc = () => {
 };
 
 // new project list in sidebar
-const newProjectListFunc = () => {
+export const newProjectListFunc = () => {
     let sidebar = document.getElementById("side-bar");
 
     const newProjectList = document.createElement("div");
@@ -101,12 +101,4 @@ const newProjectListFunc = () => {
     return sidebar;
 };
 
-
-
-export { headerFunc, 
-    toDoBodyFunc, 
-    sideBarFunc, 
-    projectContentFunc, 
-    dayWiseListFunc, 
-    newProjectListFunc,   
-};
+// export { headerFunc, toDoBodyFunc, sideBarFunc, projectContentFunc, dayWiseListFunc, newProjectListFunc };
